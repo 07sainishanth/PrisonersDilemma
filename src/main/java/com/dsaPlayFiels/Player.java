@@ -44,15 +44,17 @@ public class Player {
         return netScore;
     }
 
+
+
     public Player() {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Please enter your first name: ");
-        setFirstName(sc.nextLine());
+//        System.out.println("Please enter your first name: ");
+//        setFirstName(sc.nextLine());
+//
+//        System.out.println("Please enter your last name: ");
+//        setLastName(sc.nextLine());
 
-        System.out.println("Please enter your last name: ");
-        setLastName(sc.nextLine());
-
-        System.out.println("Please enter your player id: ");
+        System.out.print("Please enter your player id: ");
         setPlayerId(sc.nextLine());
 
         System.out.println("Hello " + getPlayerId() + "!");

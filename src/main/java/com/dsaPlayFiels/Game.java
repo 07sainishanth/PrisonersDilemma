@@ -36,16 +36,16 @@ public class Game {
             map.put(player2, new EachRoundScore(minNoCoOperatePoints, player2CoOperate, round));
         }
         else if (!player1CoOperate && !player2CoOperate) {
-            map.put(player1, new EachRoundScore(minNoCoOperatePoints, player1CoOperate, round));
-            map.put(player2, new EachRoundScore(minNoCoOperatePoints, player2CoOperate, round));
+            map.put(player1, new EachRoundScore(coOperatePoints, player1CoOperate, round));
+            map.put(player2, new EachRoundScore(coOperatePoints, player2CoOperate, round));
         }
         else if (player1CoOperate && !player2CoOperate) {
-            map.put(player1, new EachRoundScore(maxNoOperatePoints, player1CoOperate, round));
-            map.put(player2, new EachRoundScore(minNoCoOperatePoints, player2CoOperate, round));
-        }
-        else if (player2CoOperate && !player1CoOperate) {
             map.put(player1, new EachRoundScore(minNoCoOperatePoints, player1CoOperate, round));
             map.put(player2, new EachRoundScore(maxNoOperatePoints, player2CoOperate, round));
+        }
+        else {
+            map.put(player1, new EachRoundScore(maxNoOperatePoints, player1CoOperate, round));
+            map.put(player2, new EachRoundScore(minNoCoOperatePoints, player2CoOperate, round));
         }
         return map;
     }

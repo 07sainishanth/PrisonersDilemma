@@ -4,8 +4,8 @@ import java.util.Map;
 
 public class PrisonersDilemma {
     private Game game;
-    private int seriesLength = 3;
-    private int goal = 15;
+    private int seriesLength = 5;
+    private int goal = 35;
     private Player player1;
     private Player player2;
 
@@ -26,6 +26,8 @@ public class PrisonersDilemma {
                     game.runGame(player1.getPlayerId(), player2.getPlayerId(), i + 1);
             player1.updateCurrentMove(result.get(player1.getPlayerId()));
             player2.updateCurrentMove(result.get(player2.getPlayerId()));
+            System.out.println(player1.getPlayerId() + " score: " + player1.getNetScore());
+            System.out.println(player2.getPlayerId() + " score: " + player2.getNetScore() + "\n=====");
             if (player1.getNetScore() >= goal) {
                 System.out.println(player1.getPlayerId() + " wins!");
                 return;
