@@ -45,3 +45,11 @@ based on the both players choices points will be evaluated.
 * Keeps track of score
 * Can keep track of past list of moves
 * Can keep track of performance across series
+
+### Oct-08/2024 ###
+
+* Split code into MVC (Game engine, Logic, Models + Data).
+* Implement strategy support in players 
+( Ability to use and switch between strategies for a player).
+* Orchestrate a tournament between a given set of players
+* Compare performance of various strategies.

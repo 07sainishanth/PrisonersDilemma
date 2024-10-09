@@ -19,6 +19,9 @@ public class PrisonersDilemma {
         player2 = new Player();
     }
 
+//    TODO : Split the functionality
+//    TODO : Evaluate results functionality
+//    TODO : Update after review
     public void playSeries() {
         for (int i = 0; i < seriesLength; i++) {
             game = new Game();
